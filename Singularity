@@ -1,9 +1,10 @@
 Bootstrap: docker
-From: ubuntu:16.04
+From: ubuntu:19.04
 
 %post
     apt-get -y update
     apt-get -y install fortune cowsay lolcat
+    apt-get -y install python3
 
 %environment
     export LC_ALL=C
