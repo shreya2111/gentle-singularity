@@ -1,4 +1,6 @@
-### *Gentle-singularity contains all the code and documentation written during the program. The image once run will install all the required packages and dependencies automatically.*
+> This work was done under Google Summer of Code 2019 in collaboration with The Distributed Litle Hen Lab
+
+** Gentle-singularity contains all the code and documentation written during the program. The image once run will install all the required packages and dependencies automatically.**
 
 ##### Instructions to use the image
 ```
@@ -12,4 +14,3 @@ cd /opt/gsoc-19
 * [blog-post](https://shreya2111.github.io/gsoc/report)
 
 
-> This work was done under Google Summer of Code 2019 in collaboration with The Distributed Litle Hen Lab
