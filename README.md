@@ -1,6 +1,6 @@
 # This work was done under Google Summer of Code 2019 in collaboration with The Distributed Litle Hen Lab
 
-## gentle-singularity contains all the code and documentation written during the program. The image once run will install all the required packages and dependencies automatically.
+gentle-singularity contains all the code and documentation written during the program. The image once run will install all the required packages and dependencies automatically.
 
 ## Instructions to use the image
 ```
@@ -10,5 +10,6 @@ singularity shell gentle.simg
 cd /opt/gsoc-19
 ```
 
-> Find the original code at https://github.com/shreya2111/gentle-labs
+> [project-git-repo](https://github.com/shreya2111/gentle-labs)
+> [blog-post](https://shreya2111.github.io/gsoc/report)
 
