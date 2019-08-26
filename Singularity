@@ -49,5 +49,5 @@ From: ubuntu:19.04
     export PATH=/usr/games:$PATH
 
 %runscript
-    fortune | cowsay | lolcat
+    # fortune | cowsay | lolcat
     cat /opt/shreya/ok.txt
