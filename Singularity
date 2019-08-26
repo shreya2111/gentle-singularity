@@ -4,6 +4,9 @@ From: ubuntu:19.04
 %post
     apt-get -y update
     apt-get -y install fortune cowsay lolcat
+    # Switching to bash as default shell since some shells scripts somewhere in our dependencies use bashisms w/ /bin/sh shebang line
+    ln -s bash /bin/sh.bash
+    mv /bin/sh.bash /bin/sh
     apt-get -y install python3
     apt-get -y install git-all
     apt-get -y install g++ make automake autoconf wget sox libtool subversion python2.7 zlib1g-dev
@@ -11,13 +14,12 @@ From: ubuntu:19.04
     mkdir -p /opt/shreya
     cd /opt/shreya
     if [ ! -d kaldi ] ; then git clone https://github.com/kaldi-asr/kaldi.git ; fi
-    rm kaldi/built-ok
     cd kaldi/tools
     if [ ! -f /opt/shreya/kaldi/built-ok ] ; then extras/check_dependencies.sh ; fi
     if [ ! -f /opt/shreya/kaldi/built-ok ] ; then make -j ; fi
     if [ ! -f intel-mlk-installed ] ; then extras/install_mkl.sh && touch intel-mlk-installed ; fi
     if [ ! -f /opt/shreya/kaldi/built-ok ] ; then extras/install_irstlm.sh ; fi
-    make openfst
+    if [ ! -f /opt/shreya/kaldi/tools/openfst ] ; then make openfst ; fi
     cd ../src
     if [ ! -f /opt/shreya/kaldi/built-ok ] ; then ./configure ; fi
     if [ ! -f /opt/shreya/kaldi/built-ok ] ; then make depend -j ; fi
