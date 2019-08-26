@@ -7,7 +7,7 @@
 singularity build gentle.simg Singularity
 singularity run gentle.simg
 singularity shell gentle.simg
-cd /opt/gsoc-19
+cd /opt/shreya
 ```
 
 * [project-git-repo](https://github.com/shreya2111/gentle-labs)
